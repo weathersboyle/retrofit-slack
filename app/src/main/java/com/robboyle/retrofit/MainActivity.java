@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String userInput = "Hi again";
+        String userInput = "changed Void to Object, y'all";
         SlackMessage slackMessage = new SlackMessage(userInput);
 
-        ServiceManager.getSlackServiceInstance().postSlackMessage(BuildConfig.SLACK_CHANNEL_URL_KEY, slackMessage, new Callback<Void>() {
+        ServiceManager.getSlackServiceInstance().postSlackMessage(BuildConfig.SLACK_CHANNEL_URL_KEY, slackMessage, new Callback<Object>() {
             @Override
-            public void success(Void aVoid, Response response) {
+            public void success(Object object, Response response) {
 
             }
 
